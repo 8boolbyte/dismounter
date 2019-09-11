@@ -2,7 +2,7 @@ local addonName, addon = ...
 
 addon.utils = {};
 
-local UI_ERROR_MESSAGES_FOR_MOUNTED = { 50, 198, 213 };
+local UI_ERROR_MESSAGES_FOR_MOUNTED = { 50, 198, 213, 504 };
 
 addon.utils.findInArray = function(array, valueToFind)
     local found = false;
