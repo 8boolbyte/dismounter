@@ -1,0 +1,9 @@
+## Interface: 11302
+## Title: Dismounter
+## Version: 0.1.0
+## Author: 8boolbyte
+## Notes: Automatically dismounts you when performing an action
+## DefaultState: enabled
+
+Dismounter_Utils.lua
+Dismounter_Core.lua
