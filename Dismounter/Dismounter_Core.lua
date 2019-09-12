@@ -9,7 +9,7 @@ local function onEvent(self, event, ...)
     local args = {...}
     
     if event == "UI_ERROR_MESSAGE" then
-        local isMountErrorMessage = addon.utils.isMountErrorMessage(args[1]);
+        local isMountErrorMessage = addon.utils.isMountErrorMessage(args[2]);
 
         if (isMountErrorMessage) then
             UIErrorsFrame:Clear();
