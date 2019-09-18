@@ -13,6 +13,7 @@ local function onEvent(self, event, ...)
 
         if (isMountErrorMessage) then
             UIErrorsFrame:Clear();
+            addon.utils.cancelShapeshiftBuffs();
             Dismount();
         end
 
@@ -20,6 +21,7 @@ local function onEvent(self, event, ...)
     end
 
     if event == "TAXIMAP_OPENED" then
+        addon.utils.cancelShapeshiftBuffs();
         Dismount();
         return;
     end
