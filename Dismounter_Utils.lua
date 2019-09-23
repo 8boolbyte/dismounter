@@ -39,14 +39,21 @@ local SHAPE_SHIFT_BUFFS = {
 addon.utils = {};
 
 addon.utils.isMountErrorMessage = function(msg)
-    return tContains(UI_ERROR_MESSAGES_FOR_MOUNTED, msg) or tContains(UI_ERROR_MESSAGES_FOR_SHAPESHIFTED, msg);
+    return tContains(UI_ERROR_MESSAGES_FOR_MOUNTED, msg);
+end
+
+addon.utils.isShapeshiftErrorMessage = function(msg)
+    return tContains(UI_ERROR_MESSAGES_FOR_SHAPESHIFTED, msg);
 end
 
 addon.utils.cancelShapeshiftBuffs = function()
+    local removedBuff = false;
     for i = 1, 40 do
         local buffId = select(10, UnitBuff("player", i));
         if (tContains(SHAPE_SHIFT_BUFFS, buffId)) then
+            removedBuff = true;
             CancelUnitBuff("player", i);
         end
     end
+    return removedBuff;
 end

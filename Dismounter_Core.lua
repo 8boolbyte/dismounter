@@ -9,13 +9,20 @@ local function onEvent(self, event, ...)
     local args = {...}
     
     if event == "UI_ERROR_MESSAGE" then
-        local isMountErrorMessage = addon.utils.isMountErrorMessage(args[2]);
+        local msg = args[2];
+        local isMountErrorMessage = addon.utils.isMountErrorMessage(msg);
+        local isShapeshiftErrorMessage = addon.utils.isShapeshiftErrorMessage(msg);
 
         if (isMountErrorMessage) then
             UIErrorsFrame:Clear();
-            addon.utils.cancelShapeshiftBuffs();
             Dismount();
         end
+
+        if (isShapeshiftErrorMessage) then
+            if (addon.utils.cancelShapeshiftBuffs()) then
+                UIErrorsFrame:Clear();
+            end
+        end;
 
         return;
     end
