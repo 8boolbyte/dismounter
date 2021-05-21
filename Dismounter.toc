@@ -1,7 +1,7 @@
-## Interface: 11302
+## Interface: 20501
 ## Title: Dismounter
-## Version: 1.2.1
-## Author: 8boolbyte
+## Version: 1.2.2
+## Author: 8boolbyte editted by Shivs
 ## Notes: Automatically dismounts you when performing an action
 ## DefaultState: enabled
 
