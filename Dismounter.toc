@@ -1,9 +1,0 @@
-## Interface: 20501
-## Title: Dismounter
-## Version: 1.2.2
-## Author: 8boolbyte editted by Shivs
-## Notes: Automatically dismounts you when performing an action
-## DefaultState: enabled
-
-Dismounter_Utils.lua
-Dismounter_Core.lua
