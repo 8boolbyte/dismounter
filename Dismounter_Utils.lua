@@ -21,19 +21,9 @@ local UI_ERROR_MESSAGES_FOR_SHAPESHIFTED = {
 };
 
 local GHOST_WOLF_ID = 2645;
-local DIRE_BEAR_FORM_ID = 9634;
-local TRAVEL_FORM_ID = 783;
-local CAT_FORM_ID = 768;
-local BEAR_FORM_ID = 5487;
-local AQUATIC_FORM_ID = 1066;
 
 local SHAPE_SHIFT_BUFFS = {
     GHOST_WOLF_ID,
-    DIRE_BEAR_FORM_ID,
-    TRAVEL_FORM_ID,
-    CAT_FORM_ID,
-    BEAR_FORM_ID,
-    AQUATIC_FORM_ID,
 };
 
 addon.utils = {};

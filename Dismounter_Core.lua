@@ -10,8 +10,11 @@ local function onEvent(self, event, ...)
     
     if event == "UI_ERROR_MESSAGE" then
         local msg = args[2];
+        message("UI_ERROR_MESSAGE: " + msg);
         local isMountErrorMessage = addon.utils.isMountErrorMessage(msg);
+        message("isMountedErrorMessage: " + isMountErrorMessage);
         local isShapeshiftErrorMessage = addon.utils.isShapeshiftErrorMessage(msg);
+        message("isShapeshiftErrorMessage: " + isShapeshiftErrorMessage);
 
         if (isMountErrorMessage) then
             UIErrorsFrame:Clear();
@@ -20,7 +23,7 @@ local function onEvent(self, event, ...)
 
         if (isShapeshiftErrorMessage) then
             if (InCombatLockdown()) then
-                addon.utils.printMsg("Can't remove shapeshift in combat")
+                addon.utils.printMsg("Can't remove Spirit Wolf in combat.")
             else
                 if (addon.utils.cancelShapeshiftBuffs()) then
                     UIErrorsFrame:Clear();
