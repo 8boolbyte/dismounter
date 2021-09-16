@@ -4,6 +4,7 @@
 ## Author: 8boolbyte editted by Shivs
 ## Notes: Automatically dismounts you when performing an action
 ## DefaultState: enabled
+## SavedVariables: DismounterDB
 
 Dismounter_Utils.lua
 Dismounter_Core.lua
