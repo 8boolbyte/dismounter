@@ -6,8 +6,6 @@ SlashCmdList.DISMOUNTER = function(msg, editBox)
     local option1 = strsplit("", msg)
     if #option1 > 0 then
         if option1 == "info" then
-            isFlying = IsFlying()
-            print(isFlying)
             addon.utils.printMsg("Dismounter TBC is a simple addon that will automatically dismounts you when you perform an action that needs you to be dismounted. It will also remove ghost wolf when an error occurs and while you're not in combat. The option 'flying' will influence if Dismounter will dismount you while flying or not.")
         end
         if option1 == "flying" then
@@ -51,7 +49,7 @@ local function onEvent(self, event, ...)
                 Dismount();
             else
                 if IsFlying() then
-                    print("Not dismounting, flying.")
+                    UIErrorsFrame:Clear();
                 else
                     UIErrorsFrame:Clear();
                     Dismount();
