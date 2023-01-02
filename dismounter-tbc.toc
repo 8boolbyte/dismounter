@@ -1,6 +1,7 @@
-## Interface: 20504
+## Interface-BCC: 20504
+## Interface-Wrath: 30400
 ## Title: Dismounter
-## Version: 2.2.2
+## Version: 2.2.3
 ## Author: 8boolbyte editted by Shivs
 ## Notes: Automatically dismounts you when performing an action
 ## DefaultState: enabled
